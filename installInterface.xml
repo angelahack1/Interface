@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="deploy2GF" name="Interface">
+       
+       <property environment="development" />
+       <property name="target.dir" value="D:/" />
+
+       <target name="deploy2GF">
+                    <echo message="Generando cliente WSDL:  ${url_wsdl}" />
+                    <copy todir="${target.dir}">
+		               <fileset dir="${basedir}/target/">
+                   			<include name="*.war"/>
+               			</fileset>
+        			</copy>
+       </target>
+       
+</project>

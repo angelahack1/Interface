@@ -23,7 +23,7 @@ public class AngyServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Angy!! served at: ").append(request.getContextPath());
+		response.getWriter().append("Angy!! ........................................................ served at: ").append(request.getContextPath());
 	}
 
 	/**
