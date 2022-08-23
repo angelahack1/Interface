@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aixkare</groupId>
   <artifactId>interface</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2</version>
   <packaging>war</packaging>
   <name>Interface Maven Webapp</name>
 
@@ -141,8 +141,8 @@
     							</goals>
     							<configuration>
     								<target>
-    									<property name="target.dir" value="${project.build.directory}/" />
-    									<ant antfile="$(project.basedir}/installInterface.xml" target="deploy2GF"/>
+    									<property name="target.dir" value="D:/" />
+    									<ant antfile="${project.basedir}/installInterface.xml" target="deploy2GF"/>
     								</target>
     							</configuration>
     						</execution>
