@@ -5,7 +5,7 @@
        <property name="target.dir" value="D:/" />
 
        <target name="deploy2GF">
-                    <echo message="Generando cliente WSDL:  ${url_wsdl}" />
+                    <echo message="Copiando War a:  ${target.dir}" />
                     <copy todir="${target.dir}">
 		               <fileset dir="${basedir}/target/">
                    			<include name="*.war"/>
