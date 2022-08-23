@@ -74,7 +74,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.2.2</version>
+          <version>3.3.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -110,6 +110,46 @@
    			<properties>
 	            <build.profile.id>development</build.profile.id>
         	</properties>
+        	
+        	 <dependencies>
+  
+			    <dependency>
+			      <groupId>junit</groupId>
+			      <artifactId>junit</artifactId>
+			      <version>4.11</version>
+			      <scope>test</scope>
+			    </dependency>
+			    
+			    	<dependency>
+				    <groupId>javax.servlet</groupId>
+				    <artifactId>javax.servlet-api</artifactId>
+				    <version>4.0.1</version>
+				    <scope>provided</scope>
+				</dependency>
+			
+				<dependency>
+				    <groupId>javax.servlet</groupId>
+				    <artifactId>jsp-api</artifactId>
+				    <version>2.0</version>
+				    <scope>provided</scope>
+				</dependency>
+				
+				<dependency>
+				    <groupId>javax.annotation</groupId>
+				    <artifactId>javax.annotation-api</artifactId>
+				    <version>1.3.2</version>
+				    <scope>provided</scope>
+				</dependency>
+				
+				<dependency>
+				    <groupId>javax.servlet</groupId>
+				    <artifactId>servlet-api</artifactId>
+				    <version>2.5</version>
+				    <scope>provided</scope>
+				</dependency>
+				
+			  </dependencies>
+  
         	<repositories>
     			<repository>
       				<id>github_interface</id>
@@ -129,7 +169,12 @@
     			</resources>
     			
     			<plugins>
-    
+          			<plugin>
+				        <artifactId>maven-war-plugin</artifactId>
+        					<configuration>
+          						<packagingIncludes>WEB-INF/lib/*.jar</packagingIncludes>
+        					</configuration>
+      				</plugin>
     				<plugin> 
     					<groupId> org.apache.maven.plugins </groupId>
     					<artifactId>maven-antrun-plugin</artifactId>
